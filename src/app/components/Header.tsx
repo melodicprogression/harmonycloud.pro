@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import { Arrow } from "./Arrow";
 
 export function Header() {
@@ -12,11 +11,11 @@ export function Header() {
     <>
       {pathname !== "/" && (
         <Link className="button back-button" href="/">
-          <Arrow /> Back to home
+          <Arrow /> Back
         </Link>
       )}
 
-      <header className="header">Header</header>
+      <header className="header">Welcome</header>
     </>
   );
 }

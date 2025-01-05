@@ -1,23 +1,22 @@
 import Link from "next/link";
+import { Logo } from "./components";
 
 export default function Home() {
-  const message = process.env["MESSAGE"] || "Welcome to Harmony Cloud!";
   return (
     <main className="content">
       <h1 className="heading">Harmony Cloud</h1>
-      <p>{message}</p>
+      <Logo />
 
       <section className="features">
-        <article className="card">
-          <h2>Join the waitlist</h2>
-          <p>
-            Sign up for the Harmony Cloud{" "}
-            <Link href="" target="_blank" rel="noopener noreferrer">
-              beta
-            </Link>{" "}
-            to receive an invite to download the app today.
-          </p>
-        </article>
+        <Link href="/join" className="cardLink">
+          <article className="card">
+            <h2>Join the waitlist</h2>
+            <p>
+              Sign up for the Harmony Cloud beta to receive an invite to
+              download the app today.
+            </p>
+          </article>
+        </Link>
         <article className="card">
           <h2>Learn more</h2>
           <p>
