@@ -1,20 +1,20 @@
 :root {
-  --primary-contrast: #0b151e;
-  --secondary-contrast: #0b151e99;
-  --background-gradient: linear-gradient(90deg, #ffca28, #f57c00);
+  --primary-contrast: #fff;
+  --secondary-contrast: #F3F3F3AA;
+  --background-gradient: linear-gradient(90deg, #244ea2, #447cbf);
   --background: #ffca28;
-  --muted: rgba(194, 137, 3, 0.3);
-  --surface: #e99e1d;
+  --muted: rgba(0, 0, 0, 0.2);
+  --surface: #00000044;
   --border: transparent;
   --top-gradient: #ffffff33;
-  --bottom-gradient: transparent;
+  --bottom-gradient: #305FAD;
   --button: #0b151e;
 }
 
 .dark-theme {
   --primary-contrast: #fff;
   --secondary-contrast: #ffffff99;
-  --background-gradient: linear-gradient(90deg, #0b151e, #0b151e);
+  --background-gradient: linear-gradient(180deg, #080808, #0b151e);
   --background: #000000;
   --muted: rgba(21, 39, 60, 0.6);
   --surface: #112031;
@@ -26,7 +26,7 @@
 
 * {
   margin: 0;
-  font-family: "Google Sans";
+  font-family: "Quicksand";
 }
 
 html {
@@ -62,6 +62,7 @@ body {
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 50%
   );
+  z-index: 1;
 }
 
 .top-gradient {
@@ -96,8 +97,20 @@ body {
   background-position-y: 100%, 0%;
   background-repeat: no-repeat;
   opacity: 0.4;
-  transform: translateY(-200px) rotate(180deg) translateZ(0px);
+  transform: translateY(-300px) translateZ(0px);
   transform-origin: center center;
+  animation: gradient 500ms ease-out;
+}
+
+@keyframes gradient {
+  0% {
+    transform: translateY(-100px) translateZ(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-300px) translateZ(0px);
+    opacity: 0.4;
+  }
 }
 
 .header {
@@ -112,10 +125,16 @@ body {
 }
 
 .heading {
-  font-size: 48px;
+  font-family: "Bebas Neue";
+  font-size: 64px;
   font-weight: 500;
-  letter-spacing: -2%;
+  letter-spacing: .5px;
   text-align: center;
+  z-index: 5;
+  background: -webkit-linear-gradient(90deg, #F3F3F3, #7a7a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideDown 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .back-button {
@@ -180,7 +199,7 @@ body {
 
 .features {
   grid-template-columns: repeat(2, 1fr);
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 .data-container {
   grid-template-columns: repeat(2, 1fr);
@@ -191,19 +210,20 @@ body {
   flex-direction: column;
   padding: 24px;
   gap: 12px;
-  max-width: 360px;
+  max-width: 300px;
   text-decoration: none;
   color: var(--primary-contrast);
   &:active {
     scale: 0.97;
   }
+  animation: slideUp 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card h2 {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 500;
-  letter-spacing: -2%;
+  letter-spacing: -.4px;
 }
 .card p {
   font-size: 13px;
@@ -213,12 +233,6 @@ body {
 }
 .link,
 .card p a {
-  color: var(--primary-contrast);
-  text-decoration: none;
-  text-underline-offset: 2px;
-}
-
-.cardLink {
   color: var(--primary-contrast);
   text-decoration: none;
   text-underline-offset: 2px;
@@ -291,7 +305,7 @@ body {
 
 @media only screen and (max-width: 1023px) {
   .heading {
-    font-size: 36px;
+    font-size: 48px;
   }
   .back-button {
     top: 10px;
@@ -309,4 +323,57 @@ body {
     height: 800px;
     margin-bottom: -400px;
   }
+}
+
+.logo {
+  animation: spin 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0;
+    transform: rotateY(60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    filter: blur(3px);
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    filter: blur(3px);
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  filter: blur(3px);
 }
