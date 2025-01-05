@@ -7,8 +7,7 @@
   --surface: #e99e1d;
   --border: transparent;
   --top-gradient: #ffffff33;
-  --bottom-gradient-top: #ffffff75;
-  --bottom-gradient-bottom: transparent;
+  --bottom-gradient: transparent;
   --button: #0b151e;
 }
 
@@ -16,13 +15,12 @@
   --primary-contrast: #fff;
   --secondary-contrast: #ffffff99;
   --background-gradient: linear-gradient(90deg, #0b151e, #0b151e);
-  --background: #0b151e;
+  --background: #000000;
   --muted: rgba(21, 39, 60, 0.6);
   --surface: #112031;
   --border: #ffffff20;
-  --top-gradient: #1b72e833;
-  --bottom-gradient-top: #1b72e8;
-  --bottom-gradient-bottom: #1b72e850;
+  --top-gradient: #000;
+  --bottom-gradient: #305FAD;
   --button: linear-gradient(90deg, #ffca28, #f57c00);
 }
 
@@ -81,11 +79,11 @@ body {
   bottom: 0;
   width: 90%;
   height: 900px;
-  margin-bottom: -550px;
+  margin-bottom: -50px;
   pointer-events: none;
   user-select: none;
-  --top: var(--bottom-gradient-top);
-  --bottom: var(--bottom-gradient-bottom);
+  --top: var(--bottom-gradient);
+  --bottom: var(--bottom-gradient);
   --first: conic-gradient(from 90deg at 0% 50%, var(--top), var(--bottom));
   --second: conic-gradient(from 270deg at 100% 50%, var(--bottom), var(--top));
   mask-image: radial-gradient(
@@ -120,11 +118,6 @@ body {
   text-align: center;
 }
 
-.regenerate-button {
-  color: var(--background);
-  background: var(--button);
-}
-
 .back-button {
   position: fixed;
   top: 32px;
@@ -136,6 +129,7 @@ body {
   gap: 6px;
   text-decoration: none;
   backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 .button {
@@ -216,6 +210,12 @@ body {
 .card p a {
   color: var(--primary-contrast);
   text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cardLink {
+  color: var(--primary-contrast);
+  text-decoration: none;
   text-underline-offset: 2px;
 }
 
@@ -313,6 +313,6 @@ body {
   .bottom-gradient {
     width: 150%;
     height: 400px;
-    margin-bottom: -450px;
+    margin-bottom: 100px;
   }
 }

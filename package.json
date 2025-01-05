@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fillout/react": "^1.1.2",
     "next": "15.0.0",
     "react": "^18",
     "react-dom": "^18"
