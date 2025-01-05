@@ -1,10 +1,10 @@
 "use client";
 import { FilloutFullScreenEmbed } from "@fillout/react";
 
-export default function Join() {
+export default function SignUp() {
   return (
     <div className="form">
-      <FilloutFullScreenEmbed filloutId="koAbUyNTB4us" inheritParameters />
+      <FilloutFullScreenEmbed filloutId="aFd7bEXeVuus" inheritParameters />
     </div>
   );
 }
