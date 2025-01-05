@@ -4,7 +4,7 @@ export function Logo() {
       xmlns="http://www.w3.org/2000/svg"
       width="300"
       viewBox="0 250 1080 550"
-      style={{ zIndex: "1" }}
+      className="logo"
     >
       <defs>
         <linearGradient

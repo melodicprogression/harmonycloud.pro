@@ -14,8 +14,6 @@ export function Header() {
           <Arrow /> Home
         </Link>
       )}
-
-      <header className="header">Welcome</header>
     </>
   );
 }
