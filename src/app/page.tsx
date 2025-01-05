@@ -27,7 +27,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Stefon Harris's website
+              {"Stefon's website"}
             </Link>{" "}
             to learn more about Harmony Cloud.
           </p>
