@@ -79,7 +79,7 @@ body {
   bottom: 0;
   width: 90%;
   height: 900px;
-  margin-bottom: -50px;
+  margin-bottom: -500px;
   pointer-events: none;
   user-select: none;
   --top: var(--bottom-gradient);
@@ -217,6 +217,9 @@ body {
   color: var(--primary-contrast);
   text-decoration: none;
   text-underline-offset: 2px;
+  &:active {
+    scale: 0.97;
+  }
 }
 
 .links-container {
@@ -279,20 +282,6 @@ body {
   pointer-events: none;
 }
 
-.card:not(:first-child)::after {
-  width: 10px;
-  left: -10px;
-  mask: url("/between-cards.svg") no-repeat center / contain;
-  -webkit-mask: url("/between-cards.svg") no-repeat center / contain;
-}
-
-.links a:not(:first-child)::after {
-  width: 30px;
-  left: calc(-20px);
-  mask: url("/between-links.svg") no-repeat center / contain;
-  -webkit-mask: url("/between-links.svg") no-repeat center / contain;
-}
-
 @media only screen and (max-width: 1023px) {
   .heading {
     font-size: 36px;
@@ -312,7 +301,7 @@ body {
   }
   .bottom-gradient {
     width: 150%;
-    height: 400px;
-    margin-bottom: 100px;
+    height: 800px;
+    margin-bottom: -400px;
   }
 }
