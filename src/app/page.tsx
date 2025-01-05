@@ -8,29 +8,25 @@ export default function Home() {
       <Logo />
 
       <section className="features">
-        <Link href="/join" className="cardLink">
-          <article className="card">
-            <h2>Join the waitlist</h2>
-            <p>
-              Sign up for the Harmony Cloud beta to receive an invite to
-              download the app today.
-            </p>
-          </article>
+        <Link href="/signup" className="card">
+          <h2>Get early access</h2>
+          <p>
+            <span className="underline">Sign up</span> for the Harmony Cloud
+            beta to receive an invite to download the app.
+          </p>
         </Link>
-        <article className="card">
+        <Link
+          href="https://www.stefonharris.com/harmony-cloud"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card"
+        >
           <h2>Learn more</h2>
           <p>
-            Visit{" "}
-            <Link
-              href="https://www.stefonharris.com/harmony-cloud"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {"Stefon's website"}
-            </Link>{" "}
-            to learn more about Harmony Cloud.
+            Visit <span className="underline">Stefon's website</span> to learn
+            more about Harmony Cloud.
           </p>
-        </article>
+        </Link>
       </section>
     </main>
   );

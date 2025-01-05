@@ -192,6 +192,11 @@ body {
   padding: 24px;
   gap: 12px;
   max-width: 360px;
+  text-decoration: none;
+  color: var(--primary-contrast);
+  &:active {
+    scale: 0.97;
+  }
 }
 
 .card h2 {
@@ -209,7 +214,7 @@ body {
 .link,
 .card p a {
   color: var(--primary-contrast);
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 2px;
 }
 
@@ -217,9 +222,6 @@ body {
   color: var(--primary-contrast);
   text-decoration: none;
   text-underline-offset: 2px;
-  &:active {
-    scale: 0.97;
-  }
 }
 
 .links-container {
@@ -282,6 +284,11 @@ body {
   pointer-events: none;
 }
 
+.underline {
+  color: var(--primary-contrast);
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 1023px) {
   .heading {
     font-size: 36px;
@@ -294,9 +301,7 @@ body {
   .data-container {
     grid-template-columns: 1fr;
   }
-  .top-gradient,
-  .card::after,
-  .links a::after {
+  .top-gradient {
     display: none;
   }
   .bottom-gradient {

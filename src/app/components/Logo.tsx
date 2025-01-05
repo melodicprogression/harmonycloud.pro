@@ -15,8 +15,8 @@ export function Logo() {
           y2="280.01"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#244ea2" />
-          <stop offset="1" stop-color="#447cbf" />
+          <stop offset="0" stopColor="#244ea2" />
+          <stop offset="1" stopColor="#447cbf" />
         </linearGradient>
       </defs>
       <path
