@@ -2,5 +2,9 @@
 import { FilloutFullScreenEmbed } from "@fillout/react";
 
 export default function Join() {
-  return <FilloutFullScreenEmbed filloutId="koAbUyNTB4us" inheritParameters />;
+  return (
+    <div className="form">
+      <FilloutFullScreenEmbed filloutId="koAbUyNTB4us" inheritParameters />
+    </div>
+  );
 }
