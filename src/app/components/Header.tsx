@@ -11,7 +11,7 @@ export function Header() {
     <>
       {pathname !== "/" && (
         <Link className="button back-button" href="/">
-          <Arrow /> Back
+          <Arrow /> Home
         </Link>
       )}
 
