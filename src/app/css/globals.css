@@ -99,7 +99,7 @@ body {
   opacity: 0.4;
   transform: translateY(-300px) translateZ(0px);
   transform-origin: center center;
-  animation: gradient 500ms ease-out;
+  animation: gradient 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @keyframes gradient {
@@ -134,7 +134,7 @@ body {
   background: -webkit-linear-gradient(90deg, #F3F3F3, #7a7a7a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: slideDown 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideDown 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .back-button {
@@ -176,7 +176,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
 }
 
 .content header {
@@ -216,7 +216,7 @@ body {
   &:active {
     scale: 0.97;
   }
-  animation: slideUp 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slideUp 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card h2 {
@@ -304,6 +304,19 @@ body {
 }
 
 @media only screen and (max-width: 1023px) {
+  .card h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -.4px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .content {
+    margin: 60px 12px;
+    gap: 40px;
+  }
   .heading {
     font-size: 48px;
   }
@@ -326,7 +339,7 @@ body {
 }
 
 .logo {
-  animation: spin 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: spin 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1;
 }
 
