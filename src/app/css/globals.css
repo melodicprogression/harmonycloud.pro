@@ -47,7 +47,7 @@ body {
 }
 
 .page-transition {
-  opacity: .3;
+  opacity: 0;
   filter: blur(3px);
 }
 
