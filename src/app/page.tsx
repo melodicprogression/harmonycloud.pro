@@ -5,7 +5,10 @@ import { TransitionLink } from "./components/TransitionLink";
 export default function Home() {
   return (
     <main className="content">
-      <h1 className="heading">Harmony Cloud</h1>
+      <div className="header">
+        <span className="white">Harmony</span>
+        <span className="blue"> Cloud</span>
+      </div>
       <Logo />
 
       <section className="features">
@@ -24,7 +27,7 @@ export default function Home() {
         >
           <h2>Learn more</h2>
           <p>
-            Visit <span className="underline">{"Stefon's website"}</span> to
+            Visit <span className="underline">{"stefonharris.com"}</span> to
             learn more about Harmony Cloud.
           </p>
         </Link>
