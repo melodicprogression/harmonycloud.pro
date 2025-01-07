@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Arrow } from "./Arrow";
+import { TransitionLink } from "./TransitionLink";
 
 export function Header() {
   const pathname = usePathname();
@@ -10,9 +10,9 @@ export function Header() {
   return (
     <>
       {pathname !== "/" && (
-        <Link className="button back-button" href="/">
-          <Arrow /> Home
-        </Link>
+        <TransitionLink className="button back-button" href="/">
+          <Arrow /> Back
+        </TransitionLink>
       )}
     </>
   );
