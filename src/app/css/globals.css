@@ -6,7 +6,6 @@
   --muted: rgba(0, 0, 0, 0.2);
   --surface: #00000044;
   --border: transparent;
-  --top-gradient: #ffffff33;
   --bottom-gradient: #305FAD;
   --button: #0b151e;
 }
@@ -19,7 +18,6 @@
   --muted: rgba(21, 39, 60, 0.6);
   --surface: #112031;
   --border: #ffffff20;
-  --top-gradient: #000;
   --bottom-gradient: #305FAD;
   --button: linear-gradient(90deg, #ffca28, #f57c00);
 }
@@ -43,6 +41,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.page-transition {
+  opacity: .3;
+  filter: blur(3px);
 }
 
 .dots {
@@ -65,16 +71,6 @@ body {
     rgba(0, 0, 0, 0) 50%
   );
   z-index: 1;
-}
-
-.top-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 25vh;
-  background: linear-gradient(180deg, transparent 0%, var(--top-gradient) 50%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
 }
 
 .bottom-gradient {
@@ -194,17 +190,12 @@ body {
   font-weight: 400;
 }
 
-.features,
-.data-container {
+.features {
   display: grid;
   gap: 10px;
 }
 
 .features {
-  grid-template-columns: repeat(2, 1fr);
-  text-wrap: pretty;
-}
-.data-container {
   grid-template-columns: repeat(2, 1fr);
   text-wrap: pretty;
 }
@@ -232,39 +223,13 @@ body {
   line-height: 1.5;
   color: var(--secondary-contrast);
 }
-.link,
+
 .card p a {
   color: var(--primary-contrast);
   text-decoration: none;
   text-underline-offset: 2px;
 }
 
-.links-container {
-  padding-top: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.links a {
-  padding: 14px 15px;
-  color: var(--primary-contrast);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-
-.links a,
 .card {
   position: relative;
   border-radius: 24px;
@@ -273,7 +238,6 @@ body {
   display: flex;
 }
 
-.links a::before,
 .card::before {
   content: "";
   position: absolute;
@@ -289,8 +253,7 @@ body {
   pointer-events: none;
 }
 
-.card:not(:first-child)::after,
-.links a:not(:first-child)::after {
+.card:not(:first-child)::after {
   content: "";
   top: 0;
   height: 100%;
@@ -345,12 +308,8 @@ body {
     top: 10px;
     left: 10px;
   }
-  .features,
-  .data-container {
+  .features {
     grid-template-columns: 1fr;
-  }
-  .top-gradient {
-    display: none;
   }
   .bottom-gradient {
     width: 150%;
@@ -401,13 +360,20 @@ body {
   }
 }
 
-body {
-  transition-property: opacity, transform, filter, background;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+.form {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  overflow: hidden;
 }
 
-.page-transition {
-  opacity: 0;
-  filter: blur(3px);
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

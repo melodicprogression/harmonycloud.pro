@@ -28,9 +28,9 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
 
     body?.classList.add("page-transition");
 
-    await sleep(200);
+    await sleep(250);
     router.push(href);
-    await sleep(200);
+    await sleep(250);
 
     body?.classList.remove("page-transition");
   };
