@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./components";
-import { TransitionLink } from "./components/TransitionLink";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,14 +11,28 @@ export default function Home() {
       </div>
       <Logo />
 
+      <Link
+        href="https://apps.apple.com/us/app/harmony-cloud-pro/id6748590924"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="app-store-badge"
+        aria-label="Download on the App Store"
+      >
+        <Image src="/appstore.png" alt="Download on the App Store" width={180} height={60} priority />
+      </Link>
+
       <section className="features">
-        <TransitionLink href="/signup" className="card">
-          <h2>Get early access</h2>
+        <Link
+          href="/signup"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card"
+        >
+          <h2>Join our community</h2>
           <p>
-            <span className="underline">Sign up</span> for the Harmony Cloud
-            beta to receive an invite to download the app.
+            Sign up with your email address to receive news and updates.
           </p>
-        </TransitionLink>
+        </Link>
         <Link
           href="https://www.stefonharris.com/harmony-cloud"
           target="_blank"
