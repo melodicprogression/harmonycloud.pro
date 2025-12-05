@@ -35,7 +35,6 @@
 
 html {
   background: var(--background);
-  overscroll-behavior: none;
 }
 
 body {
