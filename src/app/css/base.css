@@ -34,7 +34,7 @@
 }
 
 html {
-  background: var(--background-gradient);
+  background: var(--background);
   overscroll-behavior: none;
 }
 
