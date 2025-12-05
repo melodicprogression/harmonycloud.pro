@@ -43,6 +43,21 @@
   }
 }
 
+.floating-banner.fading {
+  animation: fadeOutBanner 700ms ease-out forwards;
+}
+
+@keyframes fadeOutBanner {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
 .banner-content {
   display: flex;
   flex-direction: column;
