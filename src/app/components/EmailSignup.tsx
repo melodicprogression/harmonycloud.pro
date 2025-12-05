@@ -16,7 +16,7 @@ export function EmailSignup() {
     const isMobile = window.matchMedia("(max-width: 800px)").matches;
 
     if (!isMobile) {
-      setCanShow(true);
+      setCanShow(true); // eslint-disable-line react-hooks/set-state-in-effect -- Required for SSR: checking window after hydration
       return;
     }
 
