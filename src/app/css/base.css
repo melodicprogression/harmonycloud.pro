@@ -6,7 +6,7 @@
   --primary-contrast: #fff;
   --secondary-contrast: #F3F3F3AA;
   --background-gradient: linear-gradient(90deg, #244ea2, #447cbf);
-  --background: #2869ff;
+  --background: #244ea2;
   --muted: rgba(0, 0, 0, 0.2);
   --surface: #00000044;
   --border: transparent;
@@ -18,7 +18,7 @@
   --primary-contrast: #fff;
   --secondary-contrast: #ffffff99;
   --background-gradient: linear-gradient(180deg, #080808, #0b151e);
-  --background: #000000;
+  --background: #080808;
   --muted: rgba(21, 39, 60, 0.6);
   --surface: #112031;
   --border: #ffffff20;
@@ -34,7 +34,8 @@
 }
 
 html {
-  background: var(--background);
+  background: var(--background-gradient);
+  overscroll-behavior: none;
 }
 
 body {
