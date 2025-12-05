@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Arrow } from "./Arrow";
-import { TransitionLink } from "./TransitionLink";
+import Link from "next/link";
 
 export function Header() {
   const pathname = usePathname();
@@ -10,9 +10,9 @@ export function Header() {
   return (
     <>
       {pathname !== "/" && (
-        <TransitionLink className="button back-button" href="/">
+        <Link className="button back-button" href="/" prefetch={false}>
           <Arrow /> Back
-        </TransitionLink>
+        </Link>
       )}
     </>
   );
