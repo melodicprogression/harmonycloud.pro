@@ -85,7 +85,7 @@
 @media only screen and (max-width: 1023px) {
   .content {
     margin: 60px 12px;
-    gap: 40px;
+    gap: 30px;
   }
   .features {
     grid-template-columns: 1fr;
