@@ -19,17 +19,15 @@ export default function Home() {
             <p className="hero-description">
               <span className="full-text">
                 Music is alive. It breathes, surprises, and connects us in ways that words never could.
-                But most ear training feels dead, with robotic exercises that drain the soul from what should be pure joy.
-                <br />
-                <br />
+                But most ear training feels dead, with rote exercises that drain the soul from what should be pure joy.
+                <br /><br />
                 <strong> Harmony Cloud</strong> is different. It develops your emotional connection to harmony while building
                 real musical skills. Unpredictable. Musical. Alive.
               </span>
               <span className="short-text">
-                Most ear training feels dead, with robotic exercises that drain the soul from what should be pure joy.
-                <br />
-                <br />
-                <strong>Harmony Cloud</strong> develops your emotional connection to harmony while building
+                Most ear training consists of rote exercises that drain the soul from what should be pure joy.
+                <br /><br />
+                <strong> Harmony Cloud</strong> develops your emotional connection to harmony while building
                 real musical skills. Unpredictable. Musical. Alive.
               </span>
             </p>
