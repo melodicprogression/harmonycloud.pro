@@ -9,6 +9,27 @@ export function EmailSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [dismissed, setDismissed] = useState(false);
+  const [canShow, setCanShow] = useState(false);
+
+  // On mobile, only show after scrolling past the App Store button
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 800px)").matches;
+
+    if (!isMobile) {
+      setCanShow(true);
+      return;
+    }
+
+    const SCROLL_THRESHOLD = 500;
+
+    function handleScroll() {
+      setCanShow(window.scrollY >= SCROLL_THRESHOLD);
+    }
+
+    handleScroll(); // Check initial position
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (status !== "success") return;
@@ -44,7 +65,7 @@ export function EmailSignup() {
     if (status === "error") setStatus("idle");
   }
 
-  if (dismissed) return null;
+  if (dismissed || !canShow) return null;
   return (
     <div
       className="floating-banner"
