@@ -1,22 +1,84 @@
 /* ========================================
-   Email Signup Component
+   Floating Email Card
    ======================================== */
 
-.email-signup-card {
+.floating-banner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  padding: 20px 24px;
+  background: rgba(10, 20, 35, 0.5);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: slideUpBanner 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.floating-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15), transparent 50%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes slideUpBanner {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banner-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.email-form {
-  display: flex;
+  align-items: flex-start;
   gap: 12px;
-  margin-top: 4px;
 }
 
-.email-input {
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 24px;
+}
+
+.banner-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-contrast);
+  line-height: 1.2;
+}
+
+.banner-subtitle {
+  font-size: 13px;
+  color: var(--secondary-contrast);
+}
+
+.banner-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.banner-input {
   flex: 1;
-  padding: 12px 16px;
+  padding: 10px 14px;
   font-size: 14px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -26,46 +88,49 @@
   transition: border-color 0.2s, background 0.2s;
 }
 
-.email-input::placeholder {
+.banner-input::placeholder {
   color: var(--secondary-contrast);
 }
 
-.email-input:focus {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.12);
+.banner-input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.email-input:disabled {
+.banner-input:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.email-message {
-  font-size: 13px;
-  margin-top: 4px;
+.banner-dismiss {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--secondary-contrast);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 12px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  line-height: 1;
 }
 
-.email-message.success {
-  color: #4ade80;
-}
-
-.email-message.error {
-  color: #f87171;
-}
-
-.form {
+.banner-dismiss:hover {
   opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-  overflow: hidden;
 }
 
-/* Email Form - Mobile */
-@media only screen and (max-width: 1023px) {
-  .email-form {
-    flex-direction: row;
+/* Mobile adjustments */
+@media only screen and (max-width: 480px) {
+  .floating-banner {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    padding: 16px 20px;
+  }
+
+  .banner-text {
+    font-size: 14px;
   }
 }
-

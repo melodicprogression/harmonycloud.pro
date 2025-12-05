@@ -32,6 +32,7 @@
   margin-bottom: -500px;
   pointer-events: none;
   user-select: none;
+  z-index: 0;
   --top: var(--bottom-gradient);
   --bottom: var(--bottom-gradient);
   --first: conic-gradient(from 90deg at 0% 50%, var(--top), var(--bottom));
@@ -53,6 +54,7 @@
 
 .content {
   margin: 120px 12px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
