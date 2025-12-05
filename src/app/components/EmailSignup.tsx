@@ -9,6 +9,7 @@ export function EmailSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [dismissed, setDismissed] = useState(false);
+  const [fading, setFading] = useState(false);
   const [canShow, setCanShow] = useState(false);
 
   // On mobile, only show after scrolling past the App Store button
@@ -33,8 +34,12 @@ export function EmailSignup() {
 
   useEffect(() => {
     if (status !== "success") return;
-    const timeout = setTimeout(() => setDismissed(true), 2000);
-    return () => clearTimeout(timeout);
+    const fadeTimeout = setTimeout(() => setFading(true), 1500);
+    const dismissTimeout = setTimeout(() => setDismissed(true), 2200);
+    return () => {
+      clearTimeout(fadeTimeout);
+      clearTimeout(dismissTimeout);
+    };
   }, [status]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -51,7 +56,6 @@ export function EmailSignup() {
 
       if (response.ok) {
         setStatus("success");
-        setEmail("");
       } else {
         setStatus("error");
       }
@@ -68,7 +72,7 @@ export function EmailSignup() {
   if (dismissed || !canShow) return null;
   return (
     <div
-      className="floating-banner"
+      className={`floating-banner ${fading ? "fading" : ""}`}
       style={{
         backdropFilter: "blur(12px) saturate(180%)",
         WebkitBackdropFilter: "blur(12px) saturate(180%)",
@@ -76,30 +80,24 @@ export function EmailSignup() {
     >
       <div className="banner-content">
         <div className="banner-text">
-          {status === "success" ? (
-            <span className="banner-title">Thanks for joining!</span>
-          ) : (
-            <>
-              <span className="banner-title">Join the Harmony Cloud Community</span>
-              <span className="banner-subtitle">Thousands of musicians discovering harmony together.</span>
-            </>
-          )}
+          <span className="banner-title">
+            {status === "success" ? "Thanks for joining!" : "Join the Harmony Cloud Community"}
+          </span>
+          <span className="banner-subtitle">Thousands of musicians discovering harmony together.</span>
         </div>
-        {status !== "success" && (
-          <form onSubmit={handleSubmit} className="banner-form">
-            <input
-              type="email"
-              value={email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              disabled={status === "loading"}
-              className="banner-input"
-              aria-label="Email address"
-              required
-            />
-            <SubmitButton status={status} disabled={!email.trim()} />
-          </form>
-        )}
+        <form onSubmit={handleSubmit} className="banner-form">
+          <input
+            type="email"
+            value={email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            disabled={status === "loading" || status === "success"}
+            className="banner-input"
+            aria-label="Email address"
+            required
+          />
+          <SubmitButton status={status} disabled={!email.trim()} />
+        </form>
         <button
           className="banner-dismiss"
           onClick={() => setDismissed(true)}
