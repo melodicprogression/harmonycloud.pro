@@ -1,0 +1,62 @@
+/* ========================================
+   Base Styles & CSS Variables
+   ======================================== */
+
+:root {
+  --primary-contrast: #fff;
+  --secondary-contrast: #F3F3F3AA;
+  --background-gradient: linear-gradient(90deg, #244ea2, #447cbf);
+  --background: #2869ff;
+  --muted: rgba(0, 0, 0, 0.2);
+  --surface: #00000044;
+  --border: transparent;
+  --bottom-gradient: #305FAD;
+  --button: #0b151e;
+}
+
+.dark-theme {
+  --primary-contrast: #fff;
+  --secondary-contrast: #ffffff99;
+  --background-gradient: linear-gradient(180deg, #080808, #0b151e);
+  --background: #000000;
+  --muted: rgba(21, 39, 60, 0.6);
+  --surface: #112031;
+  --border: #ffffff20;
+  --bottom-gradient: #305FAD;
+  --button: linear-gradient(90deg, #ffca28, #f57c00);
+}
+
+* {
+  margin: 0;
+  font-family: "SF Pro", ui-sans-serif, -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  color: var(--primary-contrast);
+  background: var(--background-gradient);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+}
+
+.page-transition {
+  opacity: 0;
+  filter: blur(3px);
+}
+
+.underline {
+  color: var(--primary-contrast);
+  text-decoration: underline;
+}
+
