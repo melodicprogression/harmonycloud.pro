@@ -23,7 +23,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 4px 30px rgba(96, 184, 255, 0.5));
+  filter: drop-shadow(0 4px 30px rgba(96, 184, 255, .7));
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   animation: gradientShift 4s ease-in-out infinite;
 }
 
