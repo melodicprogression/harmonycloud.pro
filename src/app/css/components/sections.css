@@ -18,7 +18,7 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
-  background: linear-gradient(90deg, #fff 0%, #60b8ff 25%, #2090ff 50%, #60b8ff 75%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #60b8ff 32%, #2090ff 50%, #60b8ff 68%, #fff 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,7 +26,7 @@
   filter: drop-shadow(0 4px 30px rgba(96, 184, 255, .7));
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
-  animation: gradientShift 4s ease-in-out infinite;
+  animation: gradientShift 6s ease-in-out infinite;
 }
 
 .hero-description {
@@ -52,7 +52,7 @@
 
 .hero-cta {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
   color: #a8d4ff;
 }
