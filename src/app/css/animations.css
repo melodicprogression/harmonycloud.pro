@@ -26,12 +26,10 @@
 
 @keyframes slideDown {
   0% {
-    filter: blur(3px);
     transform: translateY(-60px);
     opacity: 0;
   }
   100% {
-    filter: blur(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -39,12 +37,10 @@
 
 @keyframes slideUp {
   0% {
-    filter: blur(3px);
     transform: translateY(60px);
     opacity: 0;
   }
   100% {
-    filter: blur(0);
     transform: translateY(0);
     opacity: 1;
   }
