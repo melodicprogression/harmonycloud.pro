@@ -1,22 +1,22 @@
 export const features = [
   {
     title: "Train Your Ears",
-    description: "Practice identifying chords and progressions with exercises that adapt to your skill level",
+    description: "Practice identifying chords and progressions with exercises that adapt to your skill level.",
     icon: "🎧"
   },
   {
     title: "Learn from a Master",
-    description: "Watch exclusive video lessons where Stefon Harris reveals how chords create emotion",
+    description: "Watch exclusive video lessons where Stefon Harris reveals how chords create emotion.",
     icon: "🎓"
   },
   {
     title: "Explore Improvisation",
-    description: "Fearlessly experiment over endless chord progressions that challenge and inspire your creativity",
+    description: "Fearlessly experiment over endless chord progressions that challenge and inspire your creativity.",
     icon: "🎷"
   },
   {
     title: "Track Your Growth",
-    description: "Monitor your progress as you develop from recognizing basic triads to hearing complex voicings instantly",
+    description: "Monitor your progress as you develop from recognizing basic triads to hearing complex voicings instantly.",
     icon: "📈"
   }
 ];
