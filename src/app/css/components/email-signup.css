@@ -87,7 +87,7 @@
 .banner-form {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -119,17 +119,22 @@
 
 .banner-dismiss {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 0;
+  right: 0;
   background: none;
   border: none;
   color: var(--secondary-contrast);
   cursor: pointer;
-  padding: 4px;
-  font-size: 12px;
-  opacity: 0.5;
+  padding: 12px;
+  font-size: 18px;
+  opacity: 0.6;
   transition: opacity 0.2s;
   line-height: 1;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-dismiss:hover {
