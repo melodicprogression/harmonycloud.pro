@@ -45,7 +45,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition-property: opacity, transform, filter, background;
+  transition-property: opacity, transform, background;
   transition-timing-function: ease-in-out;
   transition-duration: 250ms;
 }
