@@ -17,21 +17,9 @@ export default function Home() {
           <section className="hero">
             <h1 className="tagline">Don&apos;t practice in silence.</h1>
             <p className="hero-description">
-              <span className="full-text">
-                Music is alive. It breathes, surprises, and connects us in ways that words never could.
-                But most ear training feels dead, with rote exercises that drain the soul from what should be pure joy.
-                <br /><br />
-                <strong> Harmony Cloud</strong> is different. It develops your emotional connection to harmony while building
-                real musical skills. Unpredictable. Musical. Alive.
-              </span>
-              <span className="short-text">
-                Most ear training consists of rote exercises that drain the soul from what should be pure joy.
-                <br /><br />
-                <strong> Harmony Cloud</strong> develops your emotional connection to harmony while building
-                real musical skills. Unpredictable. Musical. Alive.
-              </span>
+              Most ear training feels dead with boring, rote exercises. <strong>Harmony Cloud</strong> puts another musician in the room with you, bringing life to your practice sessions.
             </p>
-            <p className="hero-cta">Free your inner musician.</p>
+            <p className="hero-cta">Never mechanical, always surprising.</p>
           </section>
         </FadeIn>
 
