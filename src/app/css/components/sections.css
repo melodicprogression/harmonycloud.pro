@@ -77,7 +77,6 @@
 .feature-card {
   position: relative;
   background: var(--surface);
-  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 28px;
   display: flex;
@@ -221,7 +220,6 @@
 .testimonial-card {
   position: relative;
   background: var(--surface);
-  backdrop-filter: blur(6px);
   border-radius: 20px;
   padding: 28px;
   margin: 0;
