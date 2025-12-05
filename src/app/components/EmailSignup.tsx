@@ -21,7 +21,7 @@ export function EmailSignup() {
       return;
     }
 
-    const SCROLL_THRESHOLD = 500;
+    const SCROLL_THRESHOLD = 550;
 
     function handleScroll() {
       setCanShow(window.scrollY >= SCROLL_THRESHOLD);
