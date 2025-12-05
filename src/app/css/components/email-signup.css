@@ -1,0 +1,71 @@
+/* ========================================
+   Email Signup Component
+   ======================================== */
+
+.email-signup-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.email-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.email-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: var(--primary-contrast);
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.email-input::placeholder {
+  color: var(--secondary-contrast);
+}
+
+.email-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.email-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.email-message {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.email-message.success {
+  color: #4ade80;
+}
+
+.email-message.error {
+  color: #f87171;
+}
+
+.form {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+
+/* Email Form - Mobile */
+@media only screen and (max-width: 1023px) {
+  .email-form {
+    flex-direction: row;
+  }
+}
+

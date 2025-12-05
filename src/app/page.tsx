@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./components";
+import { Logo, EmailSignup } from "./components";
 import Image from "next/image";
 
 export default function Home() {
@@ -22,17 +22,7 @@ export default function Home() {
       </Link>
 
       <section className="features">
-        <Link
-          href="/signup"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card"
-        >
-          <h2>Join our community</h2>
-          <p>
-            Sign up with your email address to receive news and updates.
-          </p>
-        </Link>
+        <EmailSignup />
         <Link
           href="https://www.stefonharris.com/harmony-cloud"
           target="_blank"

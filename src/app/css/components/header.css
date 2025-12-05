@@ -1,0 +1,76 @@
+/* ========================================
+   Header & Logo Components
+   ======================================== */
+
+.header {
+  z-index: 5;
+}
+
+.header span {
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: 1px;
+  animation: slideDown 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header span.white {
+  font-weight: 300;
+  background: -webkit-linear-gradient(90deg, #F3F3F3, #9a9a9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header span.blue {
+  font-weight: 700;
+  background: -webkit-linear-gradient(90deg, #244ea2, #447cbf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  animation: spin 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.app-store-badge {
+  display: inline-block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  animation: slideUp 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-delay: 100ms;
+  animation-fill-mode: both;
+}
+
+.app-store-badge:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.app-store-badge:active {
+  transform: scale(0.98);
+}
+
+/* Header - Mobile */
+@media only screen and (max-width: 1023px) {
+  .header {
+    z-index: 5;
+  }
+  .header > span {
+    text-transform: uppercase;
+    font-size: 34px;
+    letter-spacing: 1px;
+    animation: slideDown 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .header > span.white {
+    font-weight: 200;
+    background: -webkit-linear-gradient(90deg, #F3F3F3, #9a9a9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header > span.blue {
+    font-weight: 700;
+    background: -webkit-linear-gradient(90deg, #244ea2, #447cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
