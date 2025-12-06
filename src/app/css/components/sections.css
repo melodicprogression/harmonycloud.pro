@@ -30,7 +30,7 @@
 }
 
 .hero-description {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: var(--secondary-contrast);
   max-width: 600px;
@@ -40,14 +40,6 @@
 .hero-description strong {
   color: var(--primary-contrast);
   font-weight: 500;
-}
-
-.hero-description .short-text {
-  display: none;
-}
-
-.hero-description .full-text {
-  display: inline;
 }
 
 .hero-cta {
@@ -296,14 +288,6 @@
 
   .hero-description {
     font-size: 16px;
-  }
-
-  .hero-description .full-text {
-    display: none;
-  }
-
-  .hero-description .short-text {
-    display: inline;
   }
 
   .hero-cta {
