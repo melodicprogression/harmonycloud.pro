@@ -56,7 +56,7 @@ export default function Home() {
             <div className="value-grid">
               <div className="value-item">
                 <strong>Real music, without AI.</strong>
-                <span> Our proprietary, hand-crafted algorithm creates chord progressions that breathe and flow like live music—never mechanical, always surprising.</span>
+                <span> Our proprietary, human-crafted algorithm creates chord progressions that breathe and flow like live music—never mechanical, always surprising.</span>
               </div>
               <div className="value-item">
                 <strong>Built by musicians, for musicians.</strong>
