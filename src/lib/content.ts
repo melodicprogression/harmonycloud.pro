@@ -16,7 +16,7 @@ export const features = [
   },
   {
     title: "Track Your Growth",
-    description: "Monitor your progress as you develop from recognizing basic triads to hearing complex voicings instantly.",
+    description: "Monitor your progress as you develop from recognizing basic triads to hearing complex voicings fluently.",
     icon: "📈"
   }
 ];
