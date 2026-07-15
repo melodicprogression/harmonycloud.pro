@@ -1,3 +1,5 @@
+const headingStyle = { fontSize: '19px', margin: '30px 0 15px 0' };
+
 export default function Privacy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', color: '#fff' }}>
@@ -5,107 +7,168 @@ export default function Privacy() {
 
       <div style={{ lineHeight: '1.6', fontSize: '14px' }}>
         <p>
-          This privacy policy applies to the Harmony Cloud app (hereby referred to as &quot;Application&quot;) for mobile devices that was created by The Melodic Progression Institute Inc. (hereby referred to as &quot;Service Provider&quot;) as a Freemium service. This service is intended for use &quot;AS IS&quot;.
+          This Privacy Policy explains how The Melodic Progression Institute Inc.
+          (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and shares information when you use
+          the Harmony Cloud mobile application (the &quot;Application&quot;).
         </p>
 
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Information Collection and Use</h2>
+        <h2 style={headingStyle}>Information We Collect</h2>
 
+        <h3>Account information</h3>
         <p>
-          The Application collects information when you download and use it. This information may include information such as
+          When you create or use an account, we receive your email address, display name (when
+          provided by your sign-in provider), authentication provider, and account identifier.
+          Authentication is provided by Firebase Authentication and may use Apple, Google, or
+          email sign-in. We do not collect your password when you use Apple or Google sign-in.
         </p>
 
+        <h3>Subscription and purchase information</h3>
+        <p>
+          Apple or Google processes your payment. We and RevenueCat receive purchase and
+          subscription information such as product, transaction, receipt, renewal, and entitlement
+          status. We do not receive or store your full payment-card details.
+        </p>
+
+        <h3>App usage and analytics</h3>
+        <p>
+          Firebase Analytics collects information about how the Application is used, including
+          page and tab views, playback and exercise interactions, settings changes, collection and
+          sharing actions, onboarding and subscription events, session timing, app version, and
+          device and operating-system information. When you are signed in, we associate these
+          events with a stable pseudonymous user identifier derived from your account identifier.
+          We do not send passwords, payment details, feedback text, or raw authentication IDs in
+          analytics events.
+        </p>
+
+        <h3>Diagnostics</h3>
+        <p>
+          Firebase Crashlytics collects crash reports, stack traces, relevant application state,
+          device and operating-system information, diagnostic logs, and developer-defined
+          non-fatal errors. When you are signed in, crash reports may be associated with the same
+          stable pseudonymous user identifier so that we can diagnose recurring problems.
+        </p>
+
+        <h3>Content you provide</h3>
+        <p>
+          If you submit feedback, we collect its category, subject, description, submission time,
+          and platform so that we can respond and improve the Application. If you share a chord
+          collection, we store the collection title, tags, chord symbols, and key signature. Anyone
+          with the resulting share link may be able to retrieve that shared collection.
+        </p>
+
+        <h3>Technical information</h3>
+        <p>
+          Our service providers may process technical information such as IP address, app version,
+          device type, operating system, locale, and application or installation identifiers to
+          deliver, secure, measure, and troubleshoot their services. The Application does not
+          collect precise location information and does not use data for cross-app advertising
+          tracking.
+        </p>
+
+        <h3>Information stored on your device</h3>
+        <p>
+          Practice history, exercise results, settings, reminder preferences, and custom chord
+          collections are primarily stored locally on your device. This local information remains
+          on the device unless you choose a feature that sends information to us or a service
+          provider, such as sharing a collection, submitting feedback, making a purchase, or using
+          the Application while analytics and diagnostics are enabled.
+        </p>
+
+        <h2 style={headingStyle}>How We Use Information</h2>
         <ul>
-          <li>Your device&apos;s Internet Protocol address (e.g. IP address)</li>
-          <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
-          <li>The time spent on the Application</li>
-          <li>The operating system you use on your mobile device</li>
+          <li>to authenticate accounts and provide the Application&apos;s features;</li>
+          <li>to validate purchases, manage subscriptions, and restore entitlements;</li>
+          <li>to understand feature usage and improve the Application;</li>
+          <li>to detect, investigate, and fix crashes and technical problems;</li>
+          <li>to process feedback and provide customer support;</li>
+          <li>to prevent fraud, protect the Application, and comply with legal obligations.</li>
         </ul>
-
         <p>
-          The Application does not gather precise information about the location of your mobile device.
+          We do not sell personal information and do not use the information collected by the
+          Application for third-party advertising or tracking across other companies&apos; apps or
+          websites.
         </p>
 
+        <h2 style={headingStyle}>Service Providers</h2>
         <p>
-          The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.
+          We share information with service providers only as needed to operate, analyze, secure,
+          and support the Application. Their handling of information is also governed by their own
+          terms and privacy policies:
         </p>
-
-        <p>
-          For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to email, name, and phone number. The information that the Service Provider request will be retained by them and used as described in this privacy policy.
-        </p>
-
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Third Party Access</h2>
-
-        <p>
-          Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
-        </p>
-
-        <p>
-          Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
-        </p>
-
         <ul>
-          <li>Firebase Crashlytics</li>
-          <li>Expo</li>
-          <li>RevenueCat</li>
+          <li>
+            <a href="https://firebase.google.com/support/privacy">Google Firebase</a> —
+            authentication, database hosting, analytics, and crash reporting
+          </li>
+          <li>
+            <a href="https://www.revenuecat.com/privacy-policy">RevenueCat</a> — subscription
+            status, receipt validation, and purchase analytics
+          </li>
+          <li>
+            <a href="https://expo.dev/privacy">Expo</a> — application development and delivery
+            services
+          </li>
+          <li>
+            <a href="https://www.apple.com/legal/privacy/">Apple</a> and{' '}
+            <a href="https://policies.google.com/privacy">Google</a> — sign-in and app-store
+            purchase services, depending on your device and choices
+          </li>
         </ul>
-
-        <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-
-        <ul>
-          <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
-          <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
-          <li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
-        </ul>
-
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Opt-Out Rights</h2>
-
         <p>
-          You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+          We may also disclose information when required by law, to respond to lawful requests, to
+          protect rights or safety, to investigate fraud, or as part of a corporate transaction
+          subject to appropriate safeguards.
         </p>
 
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Data Retention Policy</h2>
-
+        <h2 style={headingStyle}>Data Retention and Deletion</h2>
         <p>
-          The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you&apos;d like them to delete User Provided Data that you have provided via the Application, please contact them at info@stefonharris.com and they will respond in a reasonable time.
+          We retain account information while your account is active and as needed to provide the
+          Application, comply with legal obligations, resolve disputes, and enforce agreements.
+          Analytics, diagnostic, purchase, feedback, and shared-content data is retained according
+          to our operational needs and the retention settings or policies of the relevant service
+          provider. Firebase states that Crashlytics crash reports and associated identifiers are
+          generally retained for 90 days before removal begins.
+        </p>
+        <p>
+          You can delete your authentication account from Account Settings in the Application.
+          Uninstalling the Application removes locally stored app data from that device but does
+          not automatically remove information already sent to us or our service providers. To
+          request access to, correction of, or deletion of other information associated with you,
+          contact us at{' '}
+          <a href="mailto:info@harmonycloudmusic.com">info@harmonycloudmusic.com</a>. We may need
+          information sufficient to verify and locate your records.
         </p>
 
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Children</h2>
-
+        <h2 style={headingStyle}>Children</h2>
         <p>
-          The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
+          The Application is not directed to children under 13, and we do not knowingly collect
+          personal information from children under 13. If you believe a child has provided personal
+          information, contact us so that we can take appropriate action.
         </p>
 
+        <h2 style={headingStyle}>Security and International Processing</h2>
         <p>
-          The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (info@stefonharris.com) so that they will be able to take the necessary actions.
+          We use reasonable administrative, technical, and organizational safeguards to protect
+          information. No method of transmission or storage is completely secure. Our service
+          providers may process information in countries other than your own, subject to their
+          contractual and legal safeguards.
         </p>
 
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Security</h2>
-
+        <h2 style={headingStyle}>Changes to This Policy</h2>
         <p>
-          The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.
+          We may update this Privacy Policy to reflect changes to the Application, our practices,
+          or applicable requirements. We will post the revised policy on this page and update the
+          effective date below.
         </p>
 
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Changes</h2>
+        <p>This Privacy Policy is effective as of July 15, 2026.</p>
 
+        <h2 style={headingStyle}>Contact Us</h2>
         <p>
-          This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
-        </p>
-
-        <p>This privacy policy is effective as of 2025-08-19</p>
-
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Your Consent</h2>
-
-        <p>
-          By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.
-        </p>
-
-        <h2 style={{ fontSize: '19px', margin: '30px 0 15px 0' }}>Contact Us</h2>
-
-        <p>
-          If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at info@stefonharris.com.
+          For privacy questions or requests, contact The Melodic Progression Institute Inc. at{' '}
+          <a href="mailto:info@harmonycloudmusic.com">info@harmonycloudmusic.com</a>.
         </p>
       </div>
     </div>
   );
 }
-
